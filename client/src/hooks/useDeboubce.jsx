@@ -7,8 +7,7 @@ function useDebounce(cb, delayMs) {
     function debounce(e) {
         clearTimeout(timer)
         timer = setTimeout(() => {
-            setValue(e.target.value)
-            console.log(value)
+            setValue(e)
         }, delayMs);
     }
     return { debounce, value }

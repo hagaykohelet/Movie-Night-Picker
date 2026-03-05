@@ -1,6 +1,16 @@
 import React from 'react'
 import '../style/MooviesCard.css'
+import { useNavigate,useParams } from "react-router-dom"
+import { useMovies } from '../store/store'
+
 function MooviesCard({ item }) {
+  const {choosenMovie} = useMovies()
+  const navigate = useNavigate()
+  let params = useParams()
+  function moviePage(){
+    choosenMovie(item)
+    navigate(`/movie/${item.imdbID}`)
+  }
   return (
     <div className='card'>
       <div className="top">
@@ -11,7 +21,7 @@ function MooviesCard({ item }) {
         <p>year: {item.Year}</p>
         <p>rating: {item.Rated}</p>
       </div>
-      <button className="btn">
+      <button className="btn" onClick={moviePage}>
         Select Seats
       </button>
     </div>
