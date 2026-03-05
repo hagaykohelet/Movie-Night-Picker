@@ -1,0 +1,15 @@
+.searchBar{
+    display: flex;
+    justify-content: center;
+}
+
+input[type=text] {
+  width: 90%;
+  padding: 12px;
+  margin-top: 2%;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  justify-self: center;
+}

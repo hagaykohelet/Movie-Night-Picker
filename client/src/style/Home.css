@@ -1,0 +1,17 @@
+header{
+    margin-top: 5%;
+    margin-left: 2%;
+}
+
+header p{
+    margin-top: 2%;
+    color: grey;
+}
+
+.moovies {
+    margin-top: 2%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2%;
+}
