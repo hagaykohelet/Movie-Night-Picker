@@ -6,8 +6,10 @@ const app = express()
 const PORT = 3000
 app.use(express.json())
 app.use(cors())
-app.use('/movies',movieRoute)
-app.get('/',(req,res)=>{
+app.use('/movies', movieRoute)
+
+
+app.get('/', (req, res) => {
     return res.send("hello from route")
 })
 
