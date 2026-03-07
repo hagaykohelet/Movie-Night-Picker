@@ -8,12 +8,10 @@ function SearchBar({ movieList, setFilter }) {
 
 
     useEffect(() => {
-
-
         const searchMovie = movies.filter((item) => item["Title"].includes(change))
         setFilter(searchMovie)
 
-    }, [movieList])
+    }, [change])
 
 
     return (

@@ -1,12 +1,8 @@
-import {create} from 'zustand';
-
+import { create } from 'zustand';
+import fetchData from '../api/fetchdata';
+const data = await fetchData()
 export const useMovies = create((set) => ({
-    movies:[],
-    movieData:[],
-    fetchMovies: async (url) => {
-        const res = await fetch(url)
-        const result = await res.json()
-        set({ movies: result.movies})
-    },
-    choosenMovie:(item)=> set({movieData:item}),
+    movies: data.movies,
+    movieData: [],
+    choosenMovie: (item) => set({ movieData: item }),
 }))
